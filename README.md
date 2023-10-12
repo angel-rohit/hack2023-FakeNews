@@ -38,6 +38,8 @@ Countering fake news and channels in stock trading is a crucial project that aim
 1. Rohit Thakur
 2. Jyoti Mourya
 
+## Demo link
+https://drive.google.com/file/d/1VOa06Bv_Csd-hggzVScMe-iG-eIvbP3D/view?usp=sharing
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.

@@ -12,6 +12,27 @@ export default function FakeTrading() {
     const data = localStorage.getItem("fakeNewsList");
     if (JSON.parse(data)) {
       setFakeNewsList(JSON.parse(data));
+    }else{
+      const fakeList = [{
+        id: new Date(),
+        title: "Fake Profits",
+        medium: "youtube",
+        link: "https://www.youtube.com/",
+        des: "The biggest scam in Trading",
+        donotagree: 0,
+        agree: 1,
+        time: new Date()
+      },{
+        id: new Date(),
+        title: "Fake telegram channel",
+        medium: "Telegram",
+        link: "https://www.youtube.com/",
+        des: "Please don't follow this channel",
+        donotagree: 0,
+        agree: 1,
+        time: new Date()
+      }];
+      localStorage.setItem("fakeNewsList", JSON.stringify(fakeList));
     }
   });
   const handleSubmit = () => {
@@ -120,7 +141,7 @@ export default function FakeTrading() {
       <ModalPopup
         closeAction={() => setComplainModal(false)}
         isShow={isComplainModal()}
-        title="Complain Cash"
+        title="Create post"
         styles={{ modelSize: "md:w-[28.750rem]" }}
         titleCss="text-skin-bold text-xl leading-6"
         titleWrapCss="pt-6"
@@ -136,7 +157,7 @@ export default function FakeTrading() {
                   onInput={(e) => setTitle(e.target.value)}
                 />
               </div>
-              <div class="flex items-center mt-2">
+              {/* <div class="flex items-center mt-2">
                 <label class="w-[20%] text-gray-700 text-sm font-medium">Medium</label>
                 <input
                   type="text"
@@ -144,7 +165,7 @@ export default function FakeTrading() {
                   value={medium()}
                   onInput={(e) => setMedium(e.target.value)}
                 />
-              </div>
+              </div> */}
               <div class="flex items-center mt-2">
                 <label class="w-[20%] text-gray-700 text-sm font-medium">Link</label>
                 <input
@@ -155,7 +176,7 @@ export default function FakeTrading() {
                 />
               </div>
               <div class="flex items-center mt-2">
-                <label class="w-[20%] text-gray-700 text-sm font-medium">Title</label>
+                <label class="w-[20%] text-gray-700 text-sm font-medium">Desc</label>
                 <textarea
                   type=""
                   class={`w-[80%] h-20 border border-skin-overlapMuted outline-none px-2 rounded-[0.1875rem] text-skin-bold bg-skin-white`}
@@ -186,12 +207,12 @@ export default function FakeTrading() {
       <ModalPopup
         closeAction={() => setReportModal(false)}
         isShow={isReportModal()}
-        title="Report Cash"
+        title="User feedback"
         styles={{ modelSize: "md:w-[28.750rem]" }}
         titleCss="text-skin-bold text-xl leading-6"
         titleWrapCss="pt-6"
         body={<div>
-          <div>Are you agree with this news</div>
+          <div class="font-medium pb-4 text-black">Are you agree with this news</div>
           <div class="flex justify-center">
               <button
                 class="mr-1 hover:bg-skin-royalblue hover:text-skin-white text-sm font-semibold border border-solid w-48 h-12 rounded text-skin-select border-skin-select"

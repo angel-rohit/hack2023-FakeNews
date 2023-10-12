@@ -1,0 +1,12 @@
+export const ACCESS_TOKEN = "AccessToken";
+export const AUTHORIZATION = "authorization"
+export const APPLICATION_NAME = "ApplicationName";
+export const HEADER_TOKEN = "TOKEN";
+export const CLIENT_IP = "ClientIP";
+export const DEVICE_ID = "DeviceID";
+export const APP_VERSION = "AppVersion";
+export const X_CLIENT_CODE = "X-ClientCode";
+export const X_AMX_SESSION_ID = "X-AMX-SessionID";
+export const X_CLIENT_PUBLIC_IP = "X-ClientPublicIP";
+export const TRADE_TOKEN = '';
+export const ACCESS_TOKEN_TEMP = '';

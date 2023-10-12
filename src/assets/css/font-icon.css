@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.ttf?3bz1lp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-account:before {
+  content: "\e907";
+}
+.icon-portfolio:before {
+  content: "\e900";
+}
+.icon-filter:before {
+  content: "\e901";
+}
+.icon-home:before {
+  content: "\e902";
+}
+.icon-minus-square:before {
+  content: "\e903";
+}
+.icon-orders:before {
+  content: "\e904";
+}
+.icon-sell-more:before {
+  content: "\e906";
+}
+.icon-unfiltered:before {
+  content: "\e908";
+}
+.icon-watchlist:before {
+  content: "\e909";
+}
+.icon-triangle:before {
+  content: "\ea1c";
+}

@@ -1,0 +1,47 @@
+@import "./assets/css/font-icon.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-text-bold: #1D1E20;
+        --color-text-base: #5D5E63;
+        --color-text-muted:#919294;
+        --color-text-green:#21B7A8;
+        --color-text-red:#EF5854;
+        --color-text-blue:#3F5BD9;
+        --color-background-grey:#F5F6FA;
+        --color-background-red:#FDEBEA;
+        --color-background-green:#E4F6F5;
+        --color-background-blue:#EFF1FB;
+        --color-background-hover:#F9FAFF;
+
+        --primary: #F5F6FA;
+        --secondary: #5D5E63;
+    }
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 4px;
+    border: 3px solid var(--primary);
+  }
+  

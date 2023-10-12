@@ -18,14 +18,12 @@ function App() {
 
   return (
     <Router>
-      <div class="bg-gray-100">
         <Routes>
           <Route path="/" component={MainLayout}>
             <Route path="/" element={<Navigate href='/home'/>}/>
             <Route path="/home" component={FakeTrading} />
           </Route>
         </Routes>
-      </div>
     </Router>
   );
 }

@@ -1,27 +1,10 @@
 import { Show, For } from "solid-js";
-
-/**
- * How to use
- * @param  {
- *  isShow : this flag is used for show or hide modal popup
- *  styles : if required any extra styles like size of modal example:  {modelSize: "lg:w-1/5"}
- *  closeAction : this action will call on close icon
- *  title : if title empty header will not show else header will show with title
- *  titleCss : if required any extra css like text color change example: titleCss="text-skin-bold"
- *  headerComponent: This props is used for passing custom Header component
- *  body: (normal text or component)
- *  actionButtons: Array of actions button , example : [{text: "Button 1", action: () => { button1Action()}, styles:"bg-skin-royalblue text-skin-white"}]
- * }
- *
- */
-
 export default function ModalPopup(props) {
   const handlOverlay = (e) => {
     if(props?.closeAction && !props?.isOverlayOff){
       if (e.target === e.currentTarget) props?.closeAction();
     }
   };
-
   return (
     <Show when={props?.isShow}>
       <div
@@ -30,13 +13,13 @@ export default function ModalPopup(props) {
       >
         <div
           id="modal_overlay"
-          class={`z-[99] inset-0 bg-skin-black bg-opacity-80 h-screen w-full flex justify-center items-start md:items-center pt-10 md:pt-0 ${props?.styles?.overlayStyles || ''}`}
+          class={`z-[99] inset-0 bg-black bg-opacity-80 h-screen w-full flex justify-center items-start md:items-center pt-10 md:pt-0 ${props?.styles?.overlayStyles || ''}`}
           onClick={handlOverlay}
         >
           {/* modal  */}
           <div
             id="modal"
-            class={`transform relative rounded-lg shadow-lg transition-transform duration-300 w-11/12 ${props?.styles?.modelBg || "bg-skin-white"} ${
+            class={`transform relative rounded-lg shadow-lg transition-transform duration-300 w-11/12 ${props?.styles?.modelBg || "bg-white"} ${
               props?.styles?.modelSize ? props?.styles?.modelSize : "md:w-98"
             }`}
           >
@@ -63,7 +46,6 @@ export default function ModalPopup(props) {
             </Show>
             {/* body  */}
             <div class={`w-full h-auto text-base text-skin-base ${props?.styles?.body || 'py-6 px-8'}`}>{props?.body}</div>
-
             {/* footer  */}
             <Show when={props.actionButtons}>
               <div class={`p-6 w-full flex justify-center items-center gap-3 ${props?.footerWrap}`}>

@@ -6,7 +6,7 @@ import { Router, Routes, Route, Navigate} from "@solidjs/router"
 import MainLayout from "./layouts/MainLayout";
 
 /* Pages */
-import HomePage from './pages/HomePage';
+import FakeTrading from './pages/HomePage';
 import AccountPage from './pages/AccountPage';
 
 /* Data Functions */
@@ -22,8 +22,7 @@ function App() {
         <Routes>
           <Route path="/" component={MainLayout}>
             <Route path="/" element={<Navigate href='/home'/>}/>
-            <Route path="/home" component={HomePage} />
-            <Route path="/account" component={AccountPage} />
+            <Route path="/home" component={FakeTrading} />
           </Route>
         </Routes>
       </div>

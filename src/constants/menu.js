@@ -4,9 +4,9 @@ export default () => [
         path:"/home",
         icon:"icon-watchlist"
     },
-    {
-        title:"Account",
-        path:"/account",
-        icon:"icon-account"
-    },
+    // {
+    //     title:"Account",
+    //     path:"/account",
+    //     icon:"icon-account"
+    // },
 ]
